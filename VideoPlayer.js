@@ -1334,7 +1334,7 @@ const styles = {
             position: 'relative',
             top: 4, left: 8,
             height: 20,
-            width: 12,
+            width: 20,
         },
     })
 };
