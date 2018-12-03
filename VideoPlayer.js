@@ -856,7 +856,7 @@ export default class VideoPlayer extends Component {
     renderTopControls() {
 
         const backControl = this.props.disableBack ? this.renderNullControl() : this.renderBack();
-        const volumeControl = this.props.disableVolume ? this.renderNullControl() : this.renderVolume();
+        // const volumeControl = this.props.disableVolume ? this.renderNullControl() : this.renderVolume();
         const fullscreenControl = this.props.disableFullscreen ? this.renderNullControl() : this.renderFullscreen();
 
         return(
@@ -874,7 +874,7 @@ export default class VideoPlayer extends Component {
                     <View style={ styles.controls.topControlGroup }>
                         { backControl }
                         <View style={ styles.controls.pullRight }>
-                            { volumeControl }
+                            {/* { volumeControl } */}
                             { fullscreenControl }
                         </View>
                     </View>
@@ -901,30 +901,30 @@ export default class VideoPlayer extends Component {
     /**
      * Render the volume slider and attach the pan handlers
      */
-    renderVolume() {
+    // renderVolume() {
 
-        return (
-            <View style={ styles.volume.container }>
-                <View style={[
-                    styles.volume.fill,
-                    { width: this.state.volumeFillWidth }
-                ]}/>
-                <View style={[
-                    styles.volume.track,
-                    { width: this.state.volumeTrackWidth }
-                ]}/>
-                <View
-                    style={[
-                        styles.volume.handle,
-                        { left: this.state.volumePosition }
-                    ]}
-                    { ...this.player.volumePanResponder.panHandlers }
-                >
-                    <Image style={ styles.volume.icon } source={ require( './assets/img/volume.png' ) } />
-                </View>
-            </View>
-        );
-    }
+    //     return (
+    //         <View style={ styles.volume.container }>
+    //             <View style={[
+    //                 styles.volume.fill,
+    //                 { width: this.state.volumeFillWidth }
+    //             ]}/>
+    //             <View style={[
+    //                 styles.volume.track,
+    //                 { width: this.state.volumeTrackWidth }
+    //             ]}/>
+    //             <View
+    //                 style={[
+    //                     styles.volume.handle,
+    //                     { left: this.state.volumePosition }
+    //                 ]}
+    //                 { ...this.player.volumePanResponder.panHandlers }
+    //             >
+    //                 <Image style={ styles.volume.icon } source={ require( './assets/img/volume.png' ) } />
+    //             </View>
+    //         </View>
+    //     );
+    // }
 
     /**
      * Render fullscreen toggle and set icon based on the fullscreen state.
