@@ -474,6 +474,7 @@ export default class VideoPlayer extends Component {
      * navigator prop by default.
      */
     _onBack() {
+        this.props.closeVideo();
         if ( this.props.navigator && this.props.navigator.pop ) {
             this.props.navigator.pop();
         }
